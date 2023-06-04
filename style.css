@@ -1,6 +1,6 @@
 body {
 			font-family: Georgia, serif;
-			background-image: url("https://telegra.ph/file/2ea555bc0b5d8306642bd.jpg");
+			background-image: url('background.png');
 			margin: 0;
 			padding: 0;
 			background-color: #FFFF2A15;
@@ -35,6 +35,7 @@ body {
 		img {
 			width: auto;
 			height: 150px;
+			border-radius: 15px;
 			display: block;
 			margin: center;
 			
