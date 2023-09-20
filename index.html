@@ -1,92 +1,41 @@
-<!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-	<title>MGHLAJ SHOP</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-		  <script src="myscript.js"></script>
-		
+  <meta charset="UTF-8">
+  <title>الانتقال إلى WhatsApp</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<script>function openWhatsApp() {
+  // تحقق مما إذا كان الحقل فارغًا
+  if (document.getElementById("phone").value === "") {
+    alert("الرجاء إدخال رقم الهاتف.");
+    return;
+  }
+
+  // إنشاء رابط WhatsApp
+  const link = document.createElement("a");
+  link.href = "https://wa.me/" + document.getElementById("phone").value;
+  link.textContent = "افتح في WhatsApp";
+
+  // فتح الرابط
+  link.click();
+}
+</script>
+
+<style>
+    @media (max-width: 768px) {
+      body {
+        width: 100%;
+      }
+    }
+  </style>
+
+  
 
 <body>
-	
-	
-	
-
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#"><img id="img1" src="logo.png" alt="صورة المنتج"></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">الرئيسية</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">المنتجات</a>
-					</li>
-					
-					<li class="nav-item">
-						<a class="nav-link" href="social.html">اتصل بنا</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-		<main>
-		<div class="container">
-			<div class="item">
-			    
-				<img src="pubg.png" alt="صورة المنتج">
-				
-				<h2>ببجي موبايل</h2>
-				<a href="https://wa.me/905370455549"><button>عرض الكل</button></a>
-				
-				  
-			</div>
-			<div class="item">
-				<img src="freefire.png" alt="صورة المنتج">
-				<h2>فري فاير</h2>
-				<a href="https://wa.me/905370455549"><button>عرض الكل</button></a>
-			</div>
-			<div class="item">
-				<img src="googleplay.png" alt="صورة المنتج">
-				<h2>جوجل بلاي</h2>
-	
-				<a href="https://wa.me/905370455549"><button>عرض الكل</button></a>
-			</div>
-			<div class="item">
-				<img src="insta.png" alt="صورة المنتج">
-				<h2>متابعين انستقرام</h2>
-	
-				<a href="https://wa.me/905370455549"><button>عرض الكل</button></a>
-			</div>
-			
-			<div class="item">
-				<img src="tiktok.png" alt="صورة المنتج">
-				<h2>متابعين تيك توك</h2>
-	
-				<a href="https://wa.me/905370455549"><button>عرض الكل</button></a>
-			</div>
-			<div class="item">
-				<img src="netflix.png" alt="صورة المنتج">
-				<h2>حسابات نتفلكس</h2>
-	
-				<a href="https://wa.me/905370455549"><button>عرض الكل</button></a>
-			
-	</main>
-	<footer class="bg-dark text-white py-3">
-		<div class="container text-center">
-			<div class="text-align: center;">
-			<h2 id="txt">حقوق النشر محفوظة mghlaj © 2023 </h2>
-		</div>
-	</footer>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <form action="#">
+    <label for="phone">أدخل رقم الهاتف:</label>
+    <input type="text" name="phone" id="phone" placeholder="+966500000000" required>
+    <button type="submit" onclick="openWhatsApp()">إرسال</button>
+  </form>
 </body>
 </html>
